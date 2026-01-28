@@ -1,0 +1,217 @@
+
+/* Neubrutalist Design System for Teacher Support Tool
+   Human-first, purpose-driven, slightly imperfect */
+
+
+   /* Neubrutalist Design System for Teacher Support Tool
+   Human-first, purpose-driven, slightly imperfect */
+
+@layer base {
+  :root {
+    /* Core palette - warm, trustworthy, grounded */
+    --background: hsl(40, 33%, 94%); /* Cream #F5F0E6 */
+    --foreground: hsl(0, 0%, 8%); /* Near black */
+
+    --card: hsl(45, 40%, 96%); /* Lighter cream */
+    --card-foreground: hsl(0, 0%, 8%);
+
+    --popover: hsl(40, 33%, 94%);
+    --popover-foreground: hsl(0, 0%, 8%);
+
+    /* Primary - Deep forest green (trust, growth) */
+    --primary: hsl(160, 36%, 26%); /* #2D5A4A */
+    --primary-foreground: hsl(40, 33%, 94%);
+
+    /* Secondary - Dusty blue (calm, supportive) */
+    --secondary: hsl(195, 25%, 59%); /* #7BA3B3 */
+    --secondary-foreground: hsl(0, 0%, 8%);
+
+    /* Accent - Muted yellow (warmth, attention) */
+    --accent: hsl(42, 55%, 77%); /* #E8D5A3 */
+    --accent-foreground: hsl(0, 0%, 8%);
+
+    /* Highlight - Soft coral (human, approachable) */
+    --highlight: hsl(15, 60%, 70%); /* Terracotta */
+    --highlight-foreground: hsl(0, 0%, 8%);
+
+    --muted: hsl(40, 20%, 88%);
+    --muted-foreground: hsl(0, 0%, 35%);
+
+    --destructive: hsl(0, 72%, 51%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+
+    --border: hsl(0, 0%, 8%); /* Strong black borders - key to neubrutalism */
+    --input: hsl(0, 0%, 8%);
+    --ring: hsl(160, 36%, 26%);
+
+    --radius: 0px; /* Sharp corners for brutalist feel */
+
+    /* Custom spacing for "imperfect" feel */
+    --space-awkward: 1.15rem;
+    --space-offset: 0.35rem;
+
+    /* Border thickness */
+    --border-brutal: 2.5px;
+    --border-heavy: 3.5px;
+
+    /* Shadow offset for depth */
+    --shadow-brutal: 4px 4px 0px hsl(0, 0%, 8%);
+    --shadow-brutal-sm: 2px 2px 0px hsl(0, 0%, 8%);
+    --shadow-brutal-hover: 6px 6px 0px hsl(0, 0%, 8%);
+  }
+
+  .dark {
+    --background: hsl(0, 0%, 8%);
+    --foreground: hsl(40, 33%, 94%);
+    --card: hsl(0, 0%, 12%);
+    --card-foreground: hsl(40, 33%, 94%);
+    --popover: hsl(0, 0%, 12%);
+    --popover-foreground: hsl(40, 33%, 94%);
+    --primary: hsl(160, 36%, 50%);
+    --primary-foreground: hsl(0, 0%, 8%);
+    --secondary: hsl(195, 25%, 45%);
+    --secondary-foreground: hsl(40, 33%, 94%);
+    --accent: hsl(42, 55%, 65%);
+    --accent-foreground: hsl(0, 0%, 8%);
+    --muted: hsl(0, 0%, 18%);
+    --muted-foreground: hsl(40, 20%, 70%);
+    --border: hsl(40, 33%, 94%);
+    --input: hsl(40, 33%, 94%);
+    --ring: hsl(160, 36%, 50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  /* Neubrutalist card with offset shadow */
+  .brutal-card {
+    @apply bg-card border-foreground transition-all duration-150;
+    border-width: var(--border-brutal);
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .brutal-card:hover {
+    box-shadow: var(--shadow-brutal-hover);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Primary button - chunky, trustworthy */
+  .brutal-button {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 transition-all duration-150;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    border: var(--border-brutal) solid hsl(var(--foreground));
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .brutal-button:hover {
+    box-shadow: var(--shadow-brutal-hover);
+    transform: translate(-2px, -2px);
+  }
+
+  .brutal-button:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+  }
+
+  /* Secondary button */
+  .brutal-button-secondary {
+    @apply bg-accent text-accent-foreground font-semibold px-6 py-3 transition-all duration-150;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    border: var(--border-brutal) solid hsl(var(--foreground));
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .brutal-button-secondary:hover {
+    box-shadow: var(--shadow-brutal-hover);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Feature card with thick border */
+  .feature-card {
+    @apply bg-card p-6 transition-all duration-150;
+    border: var(--border-heavy) solid hsl(var(--foreground));
+  }
+
+  /* Quote card - softer */
+  .quote-card {
+    @apply bg-secondary/20 p-6;
+    border-left: var(--border-heavy) solid hsl(var(--secondary));
+  }
+
+  /* Handwritten underline effect */
+  .underline-hand {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: hsl(var(--accent));
+    text-underline-offset: 4px;
+  }
+
+  /* Marker highlight */
+  .highlight-marker {
+    background: linear-gradient(180deg, transparent 60%, hsl(var(--accent) / 0.5) 60%);
+  }
+
+  /* Asymmetric section padding */
+  .section-asymmetric {
+    @apply py-16 md:py-24;
+    padding-left: 1.5rem;
+    padding-right: 2.25rem;
+  }
+
+  /* Mobile screen mockup */
+  .phone-mockup {
+    @apply bg-foreground rounded-3xl p-2;
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .phone-mockup-screen {
+    @apply bg-background rounded-2xl overflow-hidden;
+  }
+}
+
+/* Purposeful micro-interactions only */
+@layer utilities {
+  .animate-subtle-bounce {
+    animation: subtleBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes subtleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  /* Slight rotation for "placed" feel */
+  .rotate-slight {
+    transform: rotate(-1deg);
+  }
+
+  .rotate-slight-reverse {
+    transform: rotate(1deg);
+  }
+
+  /* Staggered grid for asymmetry */
+  .grid-offset > *:nth-child(even) {
+    transform: translateY(1rem);
+  }
+}
