@@ -1,6 +1,7 @@
 import HeroSection from '@/Components/HeroSection'
 import Header from '@/Components/Header'
 import PrototypeMockupSection from '@/Components/PrototypeMockupSection'
+import HowItWorksSection from '@/Components/HowItWorksSections'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header/>
       <HeroSection/>
       <PrototypeMockupSection/>
+      <HowItWorksSection/>  
       
     </div>
   );
