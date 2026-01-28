@@ -1,9 +1,11 @@
+'use client'
+
 import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
-    <section className="section-asymmetric">
-      <div className="container max-w-3xl text-center">
+    <section className="section-asymmetric   flex justify-center items-center py-20">
+      <div className="container max-w-3xl bg-paper relative text-center bg-sqaure-grid bg-opacity-40 p-6 md:p-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

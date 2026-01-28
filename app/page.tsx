@@ -2,6 +2,7 @@ import HeroSection from '@/Components/HeroSection'
 import Header from '@/Components/Header'
 import PrototypeMockupSection from '@/Components/PrototypeMockupSection'
 import HowItWorksSection from '@/Components/HowItWorksSections'
+import CTASection from '@/Components/CTASection'
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Header/>
       <HeroSection/>
       <PrototypeMockupSection/>
-      <HowItWorksSection/>  
+      <HowItWorksSection/>
+      <CTASection/>  
       
     </div>
   );
