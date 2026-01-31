@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-paper backdrop-blur-sm border-b-2 border-foreground">
@@ -23,9 +25,12 @@ const Header = () => {
             >
               How it works
             </a>
-             <button className="px-4 py-2 text-lg  font-semibold border-2 border-black bg-green text-white shadow-brutal">
+            
+                <button className="px-4 py-2 text-lg  font-semibold border-2 border-black bg-green text-white shadow-brutal">
                 Features
               </button>
+            
+           
                <button className="px-4 py-2 text-lg bg-yellow-300 font-semibold border-2 border-black bg-green text-black shadow-brutal">
                 Try now 
               </button>
