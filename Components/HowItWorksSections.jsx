@@ -8,36 +8,38 @@ import {
 const steps = [
   {
     step: "Step 1",
-    title: "Speak or type your problem",
+    title: "Start a focus session",
     desc:
-      `"My students don't understand subtraction with borrowing" — just say what's happening.`,
-    bg: "bg-[#ead9ad]", // warm yellow
+      "Tell NeuroDroid what you want to work on — studying, coding, reading, or deep work.",
+    bg: "bg-[#ead9ad]",
     icon: MessageCircle,
   },
   {
     step: "Step 2",
-    title: "Get practical suggestions",
+    title: "AI monitors intent drift",
     desc:
-      "Receive 2–3 things you can try right now, in your next 10 minutes.",
-    bg: "bg-[#cfdedd]", // light blue
+      "On-device AI understands scrolling patterns, content relevance, and attention decay.",
+    bg: "bg-[#cfdedd]",
     icon: Lightbulb,
   },
   {
     step: "Step 3",
-    title: "Try it in class",
-    desc: "Pick one suggestion. Use it. See what happens.",
-    bg: "bg-[#efd6c8]", // soft peach
+    title: "Distraction is interrupted",
+    desc:
+      "When focus drops, NeuroDroid pauses distractions and redirects you to your original task.",
+    bg: "bg-[#efd6c8]",
     icon: PlayCircle,
   },
   {
     step: "Step 4",
-    title: "Share what worked",
+    title: "Stay in control",
     desc:
-      "Help other teachers by telling us which ideas helped.",
-    bg: "bg-[#d7ddd2]", // muted green
+      "No cloud tracking. No manipulation. Your focus stays private, local, and intentional.",
+    bg: "bg-[#d7ddd2]",
     icon: Share2,
   },
 ];
+
 
 const HowItWorksSection = () => {
   return (
@@ -49,16 +51,17 @@ const HowItWorksSection = () => {
         {/* HEADER */}
         <div className="mb-14 max-w-xl">
           <span className="inline-block bg-[#2f5d4a] text-[#f4f1ea] px-4 py-1 text-sm font-semibold border-2 border-foreground">
-            Simple steps
-          </span>
+  AI-powered focus enforcement
+</span>
 
-          <h2 className="text-4xl font-display mt-5 mb-3">
-            How it works
-          </h2>
+        
+<h2 className="text-4xl font-display mt-5 mb-3">
+  How NeuroDroid works
+</h2>
 
-          <p className="text-muted-foreground text-lg">
-            No apps to download. No accounts to create. Just ask.
-          </p>
+<p className="text-muted-foreground text-lg">
+  An on-device AI agent that protects your attention before brain rot takes over.
+</p> NeuroDroid 
         </div>
 
         {/* STEPS GRID */}

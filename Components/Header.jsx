@@ -2,16 +2,16 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-paper backdrop-blur-sm border-b-2 border-foreground">
       <div className="container max-w-5xl">
-        <div className="flex items-center justify-between h-16 px-4">
+        <div className="flex items-center justify-between h-16 px-4 ml-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary border-2 border-foreground flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-sm">
-                C
+                N
               </span>
             </div>
-            <span className="font-display font-semibold text-lg hidden sm:block">
-              Classroom Support
+            <span className=" font-display font-semibold text-lg hidden sm:block">
+             NeuroDroid
             </span>
           </div>
 
@@ -23,8 +23,14 @@ const Header = () => {
             >
               How it works
             </a>
-               <button className="px-4 py-2 text-lg font-semibold border-2 border-black bg-green text-white shadow-brutal">
+             <button className="px-4 py-2 text-lg  font-semibold border-2 border-black bg-green text-white shadow-brutal">
+                Features
+              </button>
+               <button className="px-4 py-2 text-lg bg-yellow-300 font-semibold border-2 border-black bg-green text-black shadow-brutal">
                 Try now 
+              </button>
+              <button className="px-4 py-2 text-lg font-semibold border-2 border-black bg-green text-white shadow-brutal">
+               login 
               </button>
           </nav>
         </div>
