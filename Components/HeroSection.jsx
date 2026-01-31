@@ -164,7 +164,7 @@ const HeroSection = () => {
               {/* Header */}
               <div className="bg-[#2f5d4a] px-4 py-3 flex justify-between items-center">
                 <span className="text-[#f4f1ea] text-sm font-semibold">
-                  NeuroDruoid Active
+                  NeuroDroid Active
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#e8d9b5]" />
               </div>
